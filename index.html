@@ -45,7 +45,7 @@
                     </div>
                     <!-- End Arrow down -->
     
-                     <div @click="selectThumb" v-for="(element,index) in carouselSlides" class="single-thumb" :class="{'active':index === activeImg}">
+                     <div @click="selectThumb(index)" v-for="(element,index) in carouselSlides" class="single-thumb" :class="{'active':index === activeImg}">
                         <img :src="element.image" :alt="element.title">
                     </div> 
     

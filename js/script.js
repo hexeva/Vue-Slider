@@ -58,9 +58,10 @@ const app = new Vue({
                 }
             },
 
-            selectThumb:function(){
-              if( this.carouselSlides.index != this.activeImg){
-                  this.carouselSlides.index = 0;
+            selectThumb:function(index){
+                
+              if( index != this.activeImg){
+                  this.activeImg = index;
 
               }
             }
