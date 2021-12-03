@@ -40,6 +40,22 @@ const app = new Vue({
          },
         // end data
         methods:{
+
+            activeDown:function(){
+                if(this.activeImg < this.carouselSlides.length - 1){
+                    this.activeImg++;
+                }else {
+                    this.activeImg = 0;
+                }
+                
+            },
+            activeUp:function(){
+                if(this.activeImg > 0){
+                    this.activeImg--;
+                }else{
+                    this.activeImg = this.carouselSlides.length - 1;
+                }
+            },
             
         },
         
