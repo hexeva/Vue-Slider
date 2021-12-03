@@ -21,7 +21,7 @@
                 <!-- Big Image container -->
                 <div class="big-images-container">
                     <!-- Single image container -->
-                     <div class="single-image active">
+                     <div class="single-image">
                         <img :src="carouselSlides[activeImg].image" :alt="carouselSlides[activeImg].name">
     
                         <div class="single-image-text">
@@ -45,7 +45,7 @@
                     </div>
                     <!-- End Arrow down -->
     
-                     <div v-for="(element,index) in carouselSlides" class="single-thumb" :class="{'active':index === activeImg}">
+                     <div @click="selectThumb" v-for="(element,index) in carouselSlides" class="single-thumb" :class="{'active':index === activeImg}">
                         <img :src="element.image" :alt="element.title">
                     </div> 
     

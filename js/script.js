@@ -37,6 +37,7 @@ const app = new Vue({
                 }   
             ],
             activeImg:0,
+            
          },
         // end data
         methods:{
@@ -56,7 +57,20 @@ const app = new Vue({
                     this.activeImg = this.carouselSlides.length - 1;
                 }
             },
+
+            selectThumb:function(){
+              if( this.carouselSlides.index != this.activeImg){
+                  this.carouselSlides.index = 0;
+
+              }
+            }
             
         },
+        // end methods
         
 });
+
+
+// 1- al click su una thumb, visualizzare in grande l'immagine corrispondente
+// 2- applicare l'autoplay allo slider: ogni 3 secondi, cambia immagine automaticamente
+// 3- quando il mouse va in hover sullo slider, bloccare l'autoplay e farlo riprendere quando esce
