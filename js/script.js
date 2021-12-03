@@ -1,12 +1,6 @@
 Vue.config.devtools = true;
 
 
-
-
-
-
-
-
 const app = new Vue(
 
     {
@@ -45,11 +39,19 @@ const app = new Vue(
                 }
                 
            
-            ]
+            ],
+            
+            
+
 
          },
         // end data
-        methods:{},
+        methods:{
+            myFunction:function(){
+                
+                alert('test');
+            }
+        },
         created:{},
     }
 
